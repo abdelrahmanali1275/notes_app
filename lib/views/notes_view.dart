@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:notes_app/widgets/custom_body.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -8,8 +8,10 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Notes view'),
+      body: Column(
+        children: const [
+          CustomNotesBody(),
+        ],
       ),
     );
   }
